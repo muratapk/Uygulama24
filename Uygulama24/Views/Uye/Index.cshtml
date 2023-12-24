@@ -1,0 +1,15 @@
+﻿@model List<Uygulama24.Models.Uyelerim>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<a href="/Uye/Create">Yeni Üye</a>
+<a asp-action="Create" asp-controller="Uye">Yeni Üye</a>
+<a asp-action="Goster" asp-controller="Home" asp-route-Id="3">Sayı</a>
+@foreach(var item in Model)
+{
+    <p>Kullanıcı Adı: @item.kul Şifre:@item.sifre </p>
+}
+
+
